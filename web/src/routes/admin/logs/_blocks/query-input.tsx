@@ -140,7 +140,7 @@ export default function LogQueryInput(props: {
           setSelected(-1);
           return;
         }
-        const idx = selected() >= 0 ? selected() : 0;
+        const idx = Math.max(selected(), 0);
         pick(idx);
         e.preventDefault();
         break;
