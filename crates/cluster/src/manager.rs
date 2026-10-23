@@ -331,7 +331,8 @@ impl Cluster {
     );
     let pods = api
       .list(&ListParams {
-        // field_selector: Some("status.phase!=Succeeded,status.phase!=Failed".to_owned()),
+        // field_selector:
+        // Some("status.phase!=Succeeded,status.phase!=Failed".to_owned()),
         ..Default::default()
       })
       .await?;
